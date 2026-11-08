@@ -141,7 +141,7 @@ At the bottom, click **Mark lesson complete**. Your progress is saved, and the *
 
 ## 📝 Step 4: Test yourself with a mock test
 
-When you've finished a course (or want to see what you already know), open its **Mock test** tab. You get 15 random questions from the whole course. Only your first answer to each question counts, and your score updates as you go. Click **New test** for a fresh set.
+When you've finished a course (or want to see what you already know), open its **Mock test** tab. You get 15 random questions from the whole course. Only your first answer to each question counts, and your score updates as you go. Click **New mock test** for a fresh set.
 
 <img src="docs/guide/15-mock.png" alt="Mock test" width="100%">
 
