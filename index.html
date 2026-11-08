@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumen — See the math behind ML &amp; Computer Science</title>
+<meta name="description" content="A free, visual, interactive school for every piece of math you need for machine learning and computer science.">
+<link rel="icon" href="art/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<link rel="stylesheet" href="css/style.css?v=4">
+<script>try{var t=localStorage.getItem('lumen.theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <a href="#/" class="brand"><img src="art/favicon.svg" alt="" width="28" height="28"><span>Lumen</span></a>
+  <nav class="topnav">
+    <a href="#/courses" data-nav="courses">Courses</a>
+    <a href="#/paths" data-nav="paths">Learning paths</a>
+    <a href="#/glossary" data-nav="glossary">Glossary</a>
+    <a href="#/progress" data-nav="progress">My progress</a>
+  </nav>
+  <button class="search-trigger" id="searchBtn"><svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Search lessons</span><kbd>/</kbd></button>
+  <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg></button>
+</header>
+<div class="drawer" id="drawer">
+  <a href="#/">Home</a><a href="#/courses">Courses</a><a href="#/paths">Learning paths</a><a href="#/glossary">Glossary</a><a href="#/progress">My progress</a>
+  <div class="drawer-courses" id="drawerCourses"></div>
+</div>
+<main id="app" tabindex="-1"></main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div><a href="#/" class="brand"><img src="art/favicon.svg" alt="" width="24" height="24"><span>Lumen</span></a>
+      <p>Every piece of math behind machine learning and computer science, explained visually, one step at a time. Free forever.</p></div>
+    <div><h4>Learn</h4><a href="#/paths/ml">Math for Machine Learning</a><a href="#/paths/cs">Math for Computer Science</a><a href="#/courses">All courses</a><a href="#/glossary">Glossary</a></div>
+    <div><h4>Made by Lyra</h4><a href="https://x.com/Lyra_void" target="_blank" rel="noopener">X / Twitter</a><a href="https://github.com/Lyra-4leafclover" target="_blank" rel="noopener">GitHub</a><a href="https://lyradossier.vercel.app/" target="_blank" rel="noopener">Portfolio</a></div>
+  </div>
+  <p class="footer-note">Your progress is saved privately in this browser.</p>
+</footer>
+<div class="search-modal" id="searchModal" hidden>
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search 200+ lessons, concepts, formulas…" autocomplete="off">
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="vendor/katex/katex.min.js"></script>
+<script src="js/data/index.js"></script>
+<script src="js/viz-core.js"></script>
+<script src="js/viz-algebra.js"></script>
+<script src="js/viz-linalg.js"></script>
+<script src="js/viz-calculus.js"></script>
+<script src="js/viz-prob.js"></script>
+<script src="js/viz-discrete.js"></script>
+<script src="js/viz-x-g01.js"></script>
+<script src="js/viz-x-g02.js"></script>
+<script src="js/viz-x-g03.js"></script>
+<script src="js/viz-x-g04.js"></script>
+<script src="js/viz-x-g05.js"></script>
+<script src="js/viz-x-g06.js"></script>
+<script src="js/viz-x-g07.js"></script>
+<script src="js/viz-x-g08.js"></script>
+<script src="js/viz-x-g09.js"></script>
+<script src="js/viz-x-g10.js"></script>
+<script src="js/viz-x-g11.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
