@@ -259,7 +259,7 @@ def parse_course(path):
                         "search": plain(" ".join(x["t"] for x in ctx.heads) + " " + cur["summary"])[:400]})
             lessons_html[cur["id"]] = h
             for d in ctx.defs:
-                glossary.append({**d, "c": course["id"], "l": cur["id"]})
+                glossary.append({**d, "html": restore_math(d["html"], ctx), "c": course["id"], "l": cur["id"]})
             if ctx.formulas:
                 formulas.append({"l": cur["id"], "t": cur["title"], "html": restore_math("".join(ctx.formulas), ctx)})
             cur = None
