@@ -91,7 +91,20 @@
       el.dataset.k = 1;
       try { katex.render(el.textContent, el, { displayMode: el.classList.contains("mb"), throwOnError: false, strict: "ignore", trust: false }); } catch (e) {}
     });
+    fitWide(root);
   }
+  function fitWide(root) {
+    $$(".m", root || document).forEach((el) => {
+      el.classList.remove("wide");
+      if (!el.offsetWidth) return;
+      const blk = el.parentElement && el.parentElement.closest("p,li,td,th,dd,div,figcaption,h3,h4,label");
+      if (blk && el.getBoundingClientRect().right > blk.getBoundingClientRect().right + 1) el.classList.add("wide");
+    });
+  }
+  let fitT;
+  window.addEventListener("resize", () => { clearTimeout(fitT); fitT = setTimeout(() => fitWide($("#app")), 150); });
+  document.addEventListener("click", (e) => { const b = e.target.closest && e.target.closest(".box,figure,.qcard,.lsec"); if (b) requestAnimationFrame(() => fitWide(b)); });
+  document.addEventListener("toggle", (e) => fitWide(e.target), true);
   window.LumenMath = (s) => { try { return katex.renderToString(s, { throwOnError: false, strict: "ignore" }); } catch (e) { return esc(s); } };
 
   function courseCard(c) {

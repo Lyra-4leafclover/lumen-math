@@ -412,3 +412,23 @@ table.tt .res{background:color-mix(in srgb,var(--accent) 8%,transparent);font-we
 @media (max-width:600px){.hero-tiles{grid-template-columns:repeat(3,1fr)}.hero-tiles .ht:nth-child(n+10){display:none}}
 .no-art .ccard .cc-sym{box-shadow:none}
 .hero-tiles{grid-auto-rows:1fr}
+/* keep visuals and math inside the screen on phones and tablets */
+@supports (overflow:clip){body{overflow-x:clip}}
+figure.viz,.viz-stage,.viz-ctl,.viz-read{max-width:100%;min-width:0;box-sizing:border-box}
+.viz-ctl>*{max-width:100%}
+.ctl{flex:1 1 180px;min-width:auto}
+.ctl select{max-width:100%}
+.viz-read{overflow-x:auto}
+figure.viz div:has(>table),figure.viz .tt-wrap{overflow-x:auto;max-width:100%}
+.box-body table{display:block;max-width:100%;overflow-x:auto}
+.m.wide{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 0}
+@media (max-width:600px){
+  .ctl{flex:1 1 100%}
+  .ctl label{white-space:normal}
+  .ctl input[type=range]{min-width:60px}
+  .ctl output{min-width:36px}
+  .viz-ctl input[type=text],.viz-ctl input[type=number]{min-width:0;max-width:100%}
+  .vbtn{padding:6px 12px}
+  .viz-read{padding:10px 12px;gap:6px 14px}
+}
+.mb,.mbw,.prose table,.box-body table,.viz-read,.tt-wrap,figure.viz div:has(>table){position:relative}
