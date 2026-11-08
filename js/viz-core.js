@@ -47,7 +47,7 @@
       const w = this.cv.parentElement.clientWidth || 600;
       let h = typeof this.o.h === "function" ? this.o.h(w) : this.o.h;
       if (this.o.aspect) h = Math.round(w / this.o.aspect);
-      h = Math.min(h, Math.max(260, window.innerHeight * 0.7));
+      h = Math.min(h, Math.max(240, window.innerHeight * (w < 520 ? 0.6 : 0.7)));
       const dpr = window.devicePixelRatio || 1;
       this.W = w; this.H = h; this.cv.width = w * dpr; this.cv.height = h * dpr; this.cv.style.height = h + "px";
       this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
